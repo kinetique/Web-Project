@@ -1,0 +1,87 @@
+.WelcomePage {
+    background: linear-gradient(180deg, #0C0C0C, #301D19, #35231D, #301D19, #0C0C0C);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Grunt Grotesk', sans-serif;
+    color: #BB9476;
+}
+
+.logo-centre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    font-family: 'Ostrovsky', sans-serif;
+    font-size: 40px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: left;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    padding-left: 80px;
+    padding-top: 30px;
+}
+
+.heading {
+    font-family: 'Ostrovsky', sans-serif;
+    font-size: 110px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input[type="text"] {
+    padding: 20px;
+    width: 550px;
+    font-size: 20px;
+    border: thin solid #BB9476;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.35);
+    color: #fff;
+}
+
+button {
+    margin-top: 15px !important;
+    padding: 20px 150px;
+    font-size: 24px !important;
+    background-color: rgba(26, 62, 39, 0.25);
+    color: #BB9476;
+    border: thin solid #BB9476;
+    border-radius: 20px !important;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase !important;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #BB9476;
+}
+
+.error {
+    color: #ff6b6b;
+    font-size: 14px;
+}
+

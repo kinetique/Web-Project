@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './WelcomePage.css';
 
 function WelcomePage({ onContinue }) {
     const [username, setUsername] = useState('');
@@ -15,8 +16,11 @@ function WelcomePage({ onContinue }) {
     };
     return (
         <div className="WelcomePage">
+            <div className="logo-centre">
             <div className="logo">AMA</div>
-            <h1>WELCOME</h1>
+            </div>
+            <div className="content">
+            <h1 className="heading">WELCOME</h1>
             <form onSubmit={handleEnter}>
                 <label htmlFor="username">ENTER YOUR NAME TO CONTINUE</label>
                 <input
@@ -29,6 +33,7 @@ function WelcomePage({ onContinue }) {
                 {error && <p className="error">{error}</p>}
                 <button type="submit">Continue</button>
             </form>
+            </div>
         </div>
     );
 }
