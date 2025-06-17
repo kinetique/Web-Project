@@ -1,0 +1,333 @@
+.main-page {
+    background: linear-gradient(
+            0deg,
+            rgba(12, 12, 12, 1) 0%,
+            rgba(48, 29, 25, 1) 35%,
+            rgba(53, 35, 29, 1) 50%,
+            rgba(48, 29, 25, 1) 65%,
+            rgba(12, 12, 12, 1) 100%
+    );
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.main-page .text-wrapper {
+    color: #BB9476;
+    font-family: "Ostrovsky", sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    left: 178.5px;
+    letter-spacing: 0;
+    line-height: 77.9px;
+    position: absolute;
+    top: 290px;
+    white-space: nowrap;
+}
+
+.main-page .subtitle {
+    color: #795548;
+    font-family: "Grunt Grotesk", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    left: 181.5px;
+    letter-spacing: 0;
+    line-height: 27.3px;
+    position: absolute;
+    text-align: center;
+    top: 400px;
+    width: 1155px;
+}
+
+.main-page .overlap {
+    background-color: rgba(0, 0, 0, 0.50);
+    height: 919px;
+    left: 1px;
+    position: absolute;
+    top: 850px;
+    width: 100%;
+}
+
+.main-page .overlap-group {
+    background-color: #674a44;
+    border-radius: 25px;
+    height: 639px;
+    position: relative;
+    width: 413px;
+}
+
+.main-page .div {
+    color: #BB9476;
+    font-family: "Ostrovsky", sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    left: 50px;
+    letter-spacing: 0;
+    line-height: 43.8px;
+    position: absolute;
+    text-align: center;
+    top: 513px;
+    width: 313px;
+}
+
+.main-page .scroll-text {
+    color: #795548;
+    font-family: "Grunt Grotesk", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    left: 381.5px;
+    letter-spacing: 0;
+    line-height: 29.2px;
+    position: absolute;
+    text-align: center;
+    top: 575px;
+    white-space: nowrap;
+}
+
+.main-page .arrow {
+    height: 69px;
+    left: 756px;
+    position: absolute;
+    top: 648px;
+    width: 37px;
+}
+
+.main-page .line-1 {
+    height: 4px;
+    left: 224px;
+    position: absolute;
+    top: 779px;
+    width: 1064px;
+}
+
+.main-page .vik-card {
+    height: 639px;
+    left: 100px;
+    position: absolute;
+    top: 64px;
+    width: 415px;
+}
+
+.main-page .viktoriaflw {
+    height: 403px;
+    left: 30px;
+    object-fit: cover;
+    position: absolute;
+    top: 48px;
+    width: 352px;
+}
+
+.main-page .prescott-card {
+    height: 639px;
+    left: 550px;
+    position: absolute;
+    top: 64px;
+    width: 415px;
+}
+
+.main-page .marsh-card {
+    height: 639px;
+    left: 999px;
+    position: absolute;
+    top: 64px;
+    width: 415px;
+}
+
+.main-page .line {
+    height: 3px;
+    left: 67px;
+    position: absolute;
+    top: 479px;
+    width: 279px;
+}
+
+.main-page .overlap-2 {
+    background-color: #3f3030;
+    border-radius: 25px;
+    height: 639px;
+    position: relative;
+    width: 413px;
+}
+
+.main-page .vector {
+    height: 76px;
+    left: 100px;
+    position: absolute;
+    top: 771px;
+    width: 41px;
+}
+
+.main-page .click {
+    color: #795548;
+    font-family: "Grunt Grotesk", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    left: 176px;
+    letter-spacing: 0;
+    line-height: 40.0px;
+    position: absolute;
+    top: 770px;
+    width: 821px;
+}
+
+.main-page .quick-poll {
+    color: #BB9476;
+    font-family: "Ostrovsky", sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    left: 500.5px;
+    letter-spacing: 0;
+    line-height: 88.8px;
+    position: absolute;
+    top: 1853px;
+    white-space: nowrap;
+}
+
+.main-page .poll {
+    height: 374px;
+    left: 100px;
+    position: absolute;
+    top: 2028px;
+    width: 746px;
+}
+
+.main-page .p {
+    color: #BB9476;
+    font-family: "Grunt Grotesk", sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 43.8px;
+    position: absolute;
+    top: 0;
+    width: 738px;
+}
+
+.main-page .rectangle {
+    border: 3px solid;
+    border-color: #795548;
+    border-radius: 7px;
+    height: 31px;
+    left: 0;
+    position: absolute;
+    top: 152px;
+    width: 31px;
+}
+
+.main-page .rectangle-2 {
+    border: 3px solid;
+    border-color: #795548;
+    border-radius: 7px;
+    height: 31px;
+    left: 0;
+    position: absolute;
+    top: 246px;
+    width: 31px;
+}
+
+.main-page .rectangle-3 {
+    border: 3px solid;
+    border-color: #795548;
+    border-radius: 7px;
+    height: 31px;
+    left: 0;
+    position: absolute;
+    top: 341px;
+    width: 31px;
+}
+
+.main-page .text-wrapper-2 {
+    color: #795548;
+    font-family: "Grunt Grotesk", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    left: 59px;
+    letter-spacing: 0;
+    line-height: 35.5px;
+    position: absolute;
+    top: 150px;
+    white-space: nowrap;
+    width: 350px;
+}
+
+.main-page .text-wrapper-3 {
+    color: #795548;
+    font-family: "Grunt Grotesk", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    left: 59px;
+    letter-spacing: 0;
+    line-height: 35.5px;
+    position: absolute;
+    top: 245px;
+    white-space: nowrap;
+    width: 350px;
+}
+
+.main-page .text-wrapper-4 {
+    color: #795548;
+    font-family: "Grunt Grotesk", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    left: 59px;
+    letter-spacing: 0;
+    line-height: 35.5px;
+    position: absolute;
+    top: 340px;
+    white-space: nowrap;
+    width: 350px;
+}
+
+.main-page .div-wrapper {
+    background-color: rgba(26, 62, 39, 25);
+    border: 2px solid;
+    border-color: #ba9376;
+    border-radius: 25px;
+    height: 65px;
+    position: relative;
+    width: 360px;
+}
+
+.main-page .confirm-button {
+    height: 65px;
+    left: 100px;
+    position: absolute;
+    top: 2474px;
+    width: 362px;
+}
+
+.main-page .text-wrapper-5 {
+    color: #BB9476;
+    font-family: "Grunt Grotesk", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    left: 109px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 14px;
+}
+
+.main-page .line-2 {
+    height: 6px;
+    left: 224px;
+    position: absolute;
+    top: 2630px;
+    width: 1064px;
+}
+
+.main-page .text-wrapper-6 {
+    color: #795548;
+    font-family: "Grunt Grotesk", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    left: 582px;
+    letter-spacing: 0;
+    line-height: 23.4px;
+    position: absolute;
+    top: 2660px;
+    white-space: nowrap;
+    padding-bottom: 50px;
+}
