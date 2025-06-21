@@ -1,0 +1,76 @@
+.vik-card,
+.prescott-card,
+.marsh-card {
+    height: 639px;
+    position: absolute;
+    top: 64px;
+    width: 415px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.vik-card {
+    left: 100px;
+}
+
+.prescott-card {
+    left: 550px;
+}
+
+.marsh-card {
+    left: 999px;
+}
+
+.overlap-1,
+.overlap-2,
+.overlap-3 {
+    border-radius: 25px;
+    height: 639px;
+    position: relative;
+    width: 413px;
+}
+
+.overlap-1 {
+    background-color: #3f3030;
+}
+
+.overlap-2 {
+    background-color: #502C34;
+}
+
+.overlap-3 {
+    background-color: #2C3A3D;
+}
+
+.viktoriaflw,
+.prescott,
+.marshall {
+    height: 403px;
+    left: 30px;
+    object-fit: cover;
+    position: absolute;
+    top: 48px;
+    width: 352px;
+}
+
+.line {
+    height: 3px;
+    left: 67px;
+    position: absolute;
+    top: 479px;
+    width: 279px;
+}
+
+.card-name {
+    color: #BB9476;
+    font-family: "Ostrovsky", sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    left: 50px;
+    letter-spacing: 0;
+    line-height: 43.8px;
+    position: absolute;
+    text-align: center;
+    top: 513px;
+    width: 313px;
+}

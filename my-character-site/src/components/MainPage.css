@@ -101,56 +101,56 @@
     width: 1064px;
 }
 
-.main-page .vik-card {
-    height: 639px;
-    left: 100px;
-    position: absolute;
-    top: 64px;
-    width: 415px;
-}
+/*.main-page .vik-card {*/
+/*    height: 639px;*/
+/*    left: 100px;*/
+/*    position: absolute;*/
+/*    top: 64px;*/
+/*    width: 415px;*/
+/*}*/
 
-.main-page .viktoriaflw {
-    height: 403px;
-    left: 30px;
-    object-fit: cover;
-    position: absolute;
-    top: 48px;
-    width: 352px;
-}
+/*.main-page .viktoriaflw {*/
+/*    height: 403px;*/
+/*    left: 30px;*/
+/*    object-fit: cover;*/
+/*    position: absolute;*/
+/*    top: 48px;*/
+/*    width: 352px;*/
+/*}*/
 
-.main-page .prescott-card {
-    height: 639px;
-    left: 550px;
-    position: absolute;
-    top: 64px;
-    width: 415px;
-}
+/*.main-page .prescott-card {*/
+/*    height: 639px;*/
+/*    left: 550px;*/
+/*    position: absolute;*/
+/*    top: 64px;*/
+/*    width: 415px;*/
+/*}*/
 
-.main-page .prescott {
-    height: 403px;
-    left: 30px;
-    object-fit: cover;
-    position: absolute;
-    top: 48px;
-    width: 352px;
-}
+/*.main-page .prescott {*/
+/*    height: 403px;*/
+/*    left: 30px;*/
+/*    object-fit: cover;*/
+/*    position: absolute;*/
+/*    top: 48px;*/
+/*    width: 352px;*/
+/*}*/
 
-.main-page .marsh-card {
-    height: 639px;
-    left: 999px;
-    position: absolute;
-    top: 64px;
-    width: 415px;
-}
+/*.main-page .marsh-card {*/
+/*    height: 639px;*/
+/*    left: 999px;*/
+/*    position: absolute;*/
+/*    top: 64px;*/
+/*    width: 415px;*/
+/*}*/
 
-.main-page .marshall {
-    height: 403px;
-    left: 30px;
-    object-fit: cover;
-    position: absolute;
-    top: 48px;
-    width: 352px;
-}
+/*.main-page .marshall {*/
+/*    height: 403px;*/
+/*    left: 30px;*/
+/*    object-fit: cover;*/
+/*    position: absolute;*/
+/*    top: 48px;*/
+/*    width: 352px;*/
+/*}*/
 
 .main-page .line {
     height: 3px;
@@ -160,29 +160,29 @@
     width: 279px;
 }
 
-.main-page .overlap-1 {
-    background-color: #3f3030;
-    border-radius: 25px;
-    height: 639px;
-    position: relative;
-    width: 413px;
-}
+/*.main-page .overlap-1 {*/
+/*    background-color: #3f3030;*/
+/*    border-radius: 25px;*/
+/*    height: 639px;*/
+/*    position: relative;*/
+/*    width: 413px;*/
+/*}*/
 
-.main-page .overlap-2 {
-    background-color: #502C34;
-    border-radius: 25px;
-    height: 639px;
-    position: relative;
-    width: 413px;
-}
+/*.main-page .overlap-2 {*/
+/*    background-color: #502C34;*/
+/*    border-radius: 25px;*/
+/*    height: 639px;*/
+/*    position: relative;*/
+/*    width: 413px;*/
+/*}*/
 
-.main-page .overlap-3 {
-    background-color: #2C3A3D;
-    border-radius: 25px;
-    height: 639px;
-    position: relative;
-    width: 413px;
-}
+/*.main-page .overlap-3 {*/
+/*    background-color: #2C3A3D;*/
+/*    border-radius: 25px;*/
+/*    height: 639px;*/
+/*    position: relative;*/
+/*    width: 413px;*/
+/*}*/
 
 .main-page .vector {
     height: 76px;
@@ -364,4 +364,46 @@
     top: 2660px;
     white-space: nowrap;
     padding-bottom: 50px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #3f3030;
+    border-radius: 15px;
+    padding: 30px;
+    width: 600px;
+    color: #BB9476;
+    font-family: "Grunt Grotesk", sans-serif;
+    position: relative;
+}
+
+.modal-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    color: #BB9476;
+    cursor: pointer;
 }

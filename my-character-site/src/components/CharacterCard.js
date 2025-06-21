@@ -1,37 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './CharacterCard.css';
 
-export default function CharacterCard({ id, name, imageSrc }) {
-    const [showInfo, setShowInfo] = useState(false);
-    const [character, setCharacter] = useState(null);
+export default function CharacterCard({ id, name, imageSrc, styleClass = "", onClick }) {
+    const getOverlayClass = () => {
+        if (id === "viktoria") return "overlap-1";
+        if (id === "prescott") return "overlap-2";
+        if (id === "marshall") return "overlap-3";
+        return "";
+    };
 
-    const fetchCharacter = async () => {
-        try {
-            const response = await fetch(`http://localhost:8888/characters/${id}`);
-            const data = await response.json();
-            setCharacter(data);
-            setShowInfo(true);
-        } catch (error) {
-            console.error("Failed to load character info", error);
-        }
+    const getImageClass = () => {
+        if (id === "viktoria") return "viktoriaflw";
+        if (id === "prescott") return "prescott";
+        if (id === "marshall") return "marshall";
+        return "";
     };
 
     return (
-        <>
-            <div className="character-card" onClick={fetchCharacter}>
-                <img src={imageSrc} alt={name} />
-                <h3>{name}</h3>
+        <div className={styleClass} onClick={() => onClick(id)} style={{ cursor: "pointer" }}>
+            <div className={getOverlayClass()}>
+                <img className={getImageClass()} src={imageSrc} alt={name} />
+                <div className="line" />
+                <div className="card-name">{name.toUpperCase()}</div>
             </div>
-
-            {showInfo && character && (
-                <div className="modal">
-                    <div className="modal-content">
-                        <span className="close" onClick={() => setShowInfo(false)}>&times;</span>
-                        <h2>{character.name}</h2>
-                        <p>{character.description}</p>
-                    </div>
-                </div>
-            )}
-        </>
+        </div>
     );
 }
