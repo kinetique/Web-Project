@@ -8,6 +8,9 @@ import line98 from "./Line 98.svg";
 import "./MainPage.css";
 import vector from "./Vector.svg";
 import viktoriaflw21 from "./viktoriaflw2.png";
+import prescottmircea from "./prescottmircea.png";
+import marshallcobham from "./marshall_cobham.png";
+import CharacterCard from "./CharacterCard";
 
 export const MainPage = () => {
     return (
@@ -25,7 +28,7 @@ export const MainPage = () => {
             <div className="overlap">
 
                 <div className="vik-card">
-                    <div className="overlap-2">
+                    <div className="overlap-1">
                         <img
                             className="viktoriaflw"
                             alt="Viktoriaflw"
@@ -39,7 +42,12 @@ export const MainPage = () => {
                 </div>
 
                 <div className="prescott-card">
-                    <div className="overlap-group">
+                    <div className="overlap-2">
+                        <img
+                            className="prescott"
+                            alt="Prescott Mircea"
+                            src={prescottmircea}
+                        />
                         <div className="div">
                             PRESCOTT
                             <br />
@@ -51,7 +59,12 @@ export const MainPage = () => {
                 </div>
 
                 <div className="marsh-card">
-                    <div className="overlap-group">
+                    <div className="overlap-3">
+                        <img
+                            className="marshall"
+                            alt="Marshall Cobham"
+                            src={marshallcobham}
+                        />
                         <div className="div">
                             MARSHALL
                             <br />

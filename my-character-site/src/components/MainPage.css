@@ -126,12 +126,30 @@
     width: 415px;
 }
 
+.main-page .prescott {
+    height: 403px;
+    left: 30px;
+    object-fit: cover;
+    position: absolute;
+    top: 48px;
+    width: 352px;
+}
+
 .main-page .marsh-card {
     height: 639px;
     left: 999px;
     position: absolute;
     top: 64px;
     width: 415px;
+}
+
+.main-page .marshall {
+    height: 403px;
+    left: 30px;
+    object-fit: cover;
+    position: absolute;
+    top: 48px;
+    width: 352px;
 }
 
 .main-page .line {
@@ -142,8 +160,24 @@
     width: 279px;
 }
 
-.main-page .overlap-2 {
+.main-page .overlap-1 {
     background-color: #3f3030;
+    border-radius: 25px;
+    height: 639px;
+    position: relative;
+    width: 413px;
+}
+
+.main-page .overlap-2 {
+    background-color: #502C34;
+    border-radius: 25px;
+    height: 639px;
+    position: relative;
+    width: 413px;
+}
+
+.main-page .overlap-3 {
+    background-color: #2C3A3D;
     border-radius: 25px;
     height: 639px;
     position: relative;
