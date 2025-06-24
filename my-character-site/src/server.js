@@ -1,9 +1,17 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const app = express();
 const PORT = 8888;
 
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:3000',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type'],
+    credentials: true
+}));
+app.use(express.json());
+app.use('/poll_images', express.static(path.join(__dirname, 'poll_images')));
 
 const characters = {
     viktoria: {
@@ -23,6 +31,24 @@ const characters = {
     }
 };
 
+const pollResults = {
+    viktoria: {
+        name: "Viktoria Fletcher",
+        caption: "You chose the genius of the multiverse!",
+        image: "http://localhost:8888/poll_images/Viktoria_meme.jpg"
+    },
+    prescott: {
+        name: "Prescott Mircea",
+        caption: "You chose the mysterious headmaster!",
+        image: "http://localhost:8888/poll_images/Prescott_meme.jpg"
+    },
+    marshall: {
+        name: "Marshall Cobham",
+        caption: "You chose the quiet yet powerful student.",
+        image: "http://localhost:8888/poll_images/Marshall_meme.jpg"
+    }
+};
+
 app.get('/characters/:id', (req, res) => {
     const id = req.params.id.toLowerCase();
     const character = characters[id];
@@ -30,6 +56,16 @@ app.get('/characters/:id', (req, res) => {
         res.json(character);
     } else {
         res.status(404).json({ error: "Character not found" });
+    }
+});
+
+app.post('/vote', (req, res) => {
+    const { id } = req.body;
+    const result = pollResults[id?.toLowerCase()];
+    if (result) {
+        res.json(result);
+    } else {
+        res.status(400).json({ error: "Invalid vote option" });
     }
 });
 
