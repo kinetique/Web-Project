@@ -15,6 +15,8 @@ import CharacterCard from "./CharacterCard";
 export const MainPage = () => {
     const [selectedCharacter, setSelectedCharacter] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedOption, setSelectedOption] = useState("");
+    const [voteResult, setVoteResult] = useState(null);
 
     const fetchCharacter = async (id) => {
         try {
@@ -24,6 +26,31 @@ export const MainPage = () => {
             setIsModalOpen(true);
         } catch (error) {
             console.error("Failed to load character info", error);
+        }
+    };
+
+    const handleVoteSubmit = async () => {
+        if (!selectedOption) {
+            return;
+        }
+
+        try {
+            const response = await fetch("http://localhost:8888/vote", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ id: selectedOption }),
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            setVoteResult(data);
+        } catch (error) {
+            console.error("Vote submission failed", error);
         }
     };
 
@@ -76,24 +103,54 @@ export const MainPage = () => {
             <div className="poll">
                 <p className="p">Which character did you like the most?</p>
 
-                <div className="rectangle" />
+                <label>
+                    <input
+                        type="radio"
+                        name="character"
+                        value="viktoria"
+                        onChange={(e) => setSelectedOption(e.target.value)}
+                    />
+                    Viktoria Fletcher
+                </label>
+                <br />
 
-                <div className="rectangle-2" />
+                <label>
+                    <input
+                        type="radio"
+                        name="character"
+                        value="prescott"
+                        onChange={(e) => setSelectedOption(e.target.value)}
+                    />
+                    Prescott Mircea
+                </label>
+                <br />
 
-                <div className="rectangle-3" />
-
-                <div className="text-wrapper-2">Viktoria Fletcher</div>
-
-                <div className="text-wrapper-3">Prescott Mircea</div>
-
-                <div className="text-wrapper-4">Marshall Cobham</div>
+                <label>
+                    <input
+                        type="radio"
+                        name="character"
+                        value="marshall"
+                        onChange={(e) => setSelectedOption(e.target.value)}
+                    />
+                    Marshall Cobham
+                </label>
             </div>
 
-            <div className="confirm-button">
+            <div className="confirm-button" onClick={handleVoteSubmit}>
                 <div className="div-wrapper">
                     <div className="text-wrapper-5">CONFIRM</div>
                 </div>
             </div>
+
+            {voteResult && (
+                <div className="modal-poll">
+                    <div className="poll-result">
+                        <span className="close-res" onClick={() => setVoteResult(null)}>&times;</span>
+                        <h3>{voteResult.caption}</h3>
+                        <img src={voteResult.image} alt={voteResult.name} style={{ maxWidth: "100%", marginTop: "10px" }} />
+                    </div>
+                </div>
+            )}
 
             <img className="line-2" alt="Line" src={line97} />
             <div className="text-wrapper-6">Created by S. Chernukha</div>
