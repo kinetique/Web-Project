@@ -16,17 +16,20 @@ app.use('/poll_images', express.static(path.join(__dirname, 'poll_images')));
 const characters = {
     viktoria: {
         id: "viktoria",
-        name: "Viktoria Fletcher",
+        name: "Viktoria",
+        lastname: "Fletcher",
         description: "A scientist who has dedicated her life to studying the multiverse. Finally, at the age of 27, she managed to travel to another universe, but to stay there she had to pretend to be an academy teacher named Arabella Beecham. She is cold, intelligent, and puts science above emotional attachment."
     },
     prescott: {
         id: "prescott",
-        name: "Prescott Mircea",
+        name: "Prescott",
+        lastname: "Mircea",
         description: "The principal of the Alzbeta Mircea Academy, at the age of 33, was turned into a vampire, about 200 years ago. A person who lived through history, teaches it and leads a vampire class. He believes that cruelty for good is better than being soft and patient. He is cold, strict and mysterious, that attracts attention to him."
     },
     marshall: {
         id: "marshall",
-        name: "Marshall Cobham",
+        name: "Marshall",
+        lastname: "Cobham",
         description: "A 15-year-old student at Alzbeta Mircea Academy, he studies in Prescott’s class because he was born a human vampire. A quiet, reserved young man, he tries very hard to gain Prescott’s approval, he has a hard time communicating with people, but he has a few friends."
     }
 };

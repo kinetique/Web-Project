@@ -51,14 +51,16 @@
     position: absolute;
     top: 48px;
     width: 352px;
+    border-radius: 25px;
 }
 
-.line {
+.card-line {
     height: 3px;
     left: 67px;
     position: absolute;
     top: 479px;
     width: 279px;
+    background-color: #BB9476;
 }
 
 .card-name {

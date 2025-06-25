@@ -221,30 +221,95 @@
     justify-content: center;
 }
 
+.character-modal {
+    display: flex;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    color: #BB9476;
+    font-family: "Grunt Grotesk", sans-serif;
+}
+
+.modal-left {
+    width: 30%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-image {
+    width: 350px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.character-name {
+    font-family: "Ostrovsky", serif;
+    text-align: center;
+    color: #BB9476;
+    border-top: 4px solid #BB9476;
+    padding-top: 20px;
+}
+
+.ch-name {
+    font-size: 45px;
+}
+
+.ch-lastname {
+    font-size: 45px;
+    line-height: 20px;
+}
+
+.modal-right {
+    width: 65%;
+    padding-left: 40px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.modal-right p {
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.character-modal.viktoria {
+    background-color: #3f3030;
+    width: 1312px;
+    height: 639px;
+}
+
+.character-modal.prescott {
+    background-color: #502C34;
+    width: 1312px;
+    height: 639px;
+    margin-left: 80px;
+}
+
+.character-modal.marshall {
+    background-color: #2C3A3D;
+    width: 1312px;
+    height: 639px;
+    margin-left: 80px;
+}
+
 .modal-content {
     background-color: #3f3030;
     border-radius: 15px;
     padding: 30px;
-    width: 600px;
+    width: 800px;
     color: #BB9476;
     font-family: "Grunt Grotesk", sans-serif;
     position: relative;
 }
 
-.modal-content h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.modal-content p {
-    font-size: 18px;
-    line-height: 1.5;
-}
-
 .close {
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: 20px;
+    right: 25px;
     font-size: 28px;
     color: #BB9476;
     cursor: pointer;

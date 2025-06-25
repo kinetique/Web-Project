@@ -1,11 +1,8 @@
 import React, {useState} from "react";
-import arrow44 from "./arrow-44.svg";
-import image from "./line97-1.svg";
-import line96 from "./Line 96.svg";
-import line97 from "./Line 97.svg";
-import line982 from "./line98-1.svg";
-import line98 from "./Line 98.svg";
 import "./MainPage.css";
+import arrow44 from "./arrow-44.svg";
+import line97 from "./Line 97.svg";
+import line98 from "./Line 98.svg";
 import vector from "./Vector.svg";
 import viktoriaflw21 from "./viktoriaflw2.png";
 import prescottmircea from "./prescottmircea.png";
@@ -147,10 +144,27 @@ export const MainPage = () => {
 
             {isModalOpen && selectedCharacter && (
                 <div className="modal">
-                    <div className="modal-content">
+                    <div className={`character-modal ${selectedCharacter.id}`}>
                         <span className="close" onClick={() => setIsModalOpen(false)}>&times;</span>
-                        <h2>{selectedCharacter.name}</h2>
+                        <div className="modal-left">
+                            <img src={
+                                selectedCharacter.id === "viktoria"
+                                    ? viktoriaflw21
+                                    : selectedCharacter.id === "prescott"
+                                        ? prescottmircea
+                                        : marshallcobham
+                            }
+                                 alt={selectedCharacter.name}
+                                 className="modal-image"
+                            />
+                        <div className="character-name">
+                            <h2 className="ch-name">{selectedCharacter.name}</h2>
+                            <h2 className="ch-lastname">{selectedCharacter.lastname}</h2>
+                        </div>
+                        </div>
+                        <div className="modal-right">
                         <p>{selectedCharacter.description}</p>
+                        </div>
                     </div>
                 </div>
             )}

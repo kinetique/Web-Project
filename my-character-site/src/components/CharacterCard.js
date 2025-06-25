@@ -20,7 +20,7 @@ export default function CharacterCard({ id, name, imageSrc, styleClass = "", onC
         <div className={styleClass} onClick={() => onClick(id)} style={{ cursor: "pointer" }}>
             <div className={getOverlayClass()}>
                 <img className={getImageClass()} src={imageSrc} alt={name} />
-                <div className="line" />
+                <div className="card-line"></div>
                 <div className="card-name">{name.toUpperCase()}</div>
             </div>
         </div>
