@@ -103,36 +103,36 @@ export const MainPage = () => {
             <div className="poll">
                 <p className="p">Which character did you like the most?</p>
 
-                <label>
+                <label className="custom-radio">
                     <input
                         type="radio"
                         name="character"
                         value="viktoria"
                         onChange={(e) => setSelectedOption(e.target.value)}
                     />
-                    Viktoria Fletcher
+                    <span>Viktoria Fletcher</span>
                 </label>
                 <br />
 
-                <label>
+                <label className="custom-radio">
                     <input
                         type="radio"
                         name="character"
                         value="prescott"
                         onChange={(e) => setSelectedOption(e.target.value)}
                     />
-                    Prescott Mircea
+                    <span>Prescott Mircea</span>
                 </label>
                 <br />
 
-                <label>
+                <label className="custom-radio">
                     <input
                         type="radio"
                         name="character"
                         value="marshall"
                         onChange={(e) => setSelectedOption(e.target.value)}
                     />
-                    Marshall Cobham
+                    <span>Marshall Cobham</span>
                 </label>
             </div>
 
@@ -141,16 +141,6 @@ export const MainPage = () => {
                     <div className="text-wrapper-5">CONFIRM</div>
                 </div>
             </div>
-
-            {voteResult && (
-                <div className="modal-poll">
-                    <div className="poll-result">
-                        <span className="close-res" onClick={() => setVoteResult(null)}>&times;</span>
-                        <h3>{voteResult.caption}</h3>
-                        <img src={voteResult.image} alt={voteResult.name} style={{ maxWidth: "100%", marginTop: "10px" }} />
-                    </div>
-                </div>
-            )}
 
             <img className="line-2" alt="Line" src={line97} />
             <div className="text-wrapper-6">Created by S. Chernukha</div>
@@ -161,6 +151,44 @@ export const MainPage = () => {
                         <span className="close" onClick={() => setIsModalOpen(false)}>&times;</span>
                         <h2>{selectedCharacter.name}</h2>
                         <p>{selectedCharacter.description}</p>
+                    </div>
+                </div>
+            )}
+
+            {voteResult && (
+                <div
+                    className="modal fade show d-block"
+                    tabIndex="-1"
+                    role="dialog"
+                    style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
+                >
+                    <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
+                        <div className="modal-content" style={{ backgroundColor: "#2e1f1f" }}>
+                            <div className="modal-header" style={{ borderBottom: "none", alignItems: "center", color: "#ba9376" }}>
+                                <h5 className="modal-title" style={{ fontWeight: "bold"}}>
+                                    {voteResult.caption}
+                                </h5>
+                                <button
+                                    type="button"
+                                    className="btn-close"
+                                    aria-label="Close"
+                                    onClick={() => setVoteResult(null)}
+                                    style={{ filter: "invert(1) scale(0.01)" }}
+                                ></button>
+                            </div>
+                            <div className="modal-body text-center">
+                                <img
+                                    src={voteResult.image}
+                                    alt={voteResult.name}
+                                    className="img-fluid rounded"
+                                    style={{
+                                        maxHeight: "80vh",
+                                        objectFit: "contain",
+                                        borderRadius: "10px",
+                                    }}
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             )}
