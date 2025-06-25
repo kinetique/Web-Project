@@ -15,3 +15,5 @@ This is a website created as a presentation of fictional characters from the aut
 - CSS Modules / Custom styles
 - Bootstrap
 - Node.js backend (local server for API `/characters` and `/vote`)
+
+Created by Sophia Chernukha
