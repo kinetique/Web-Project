@@ -5,10 +5,17 @@ function WelcomePage({ onContinue }) {
     const [username, setUsername] = useState('');
     const [error, setError] = useState('');
 
+    const isSafeInput = (input) => {
+        const xssPattern = /[<>\/\\'"`]|script/i;
+        return !xssPattern.test(input);
+    };
+
     const handleEnter = (e) => {
         e.preventDefault();
         if (username.trim() === '') {
             setError("Username is required");
+        } else if (!isSafeInput(username)) {
+            setError("Invalid characters in name");
         } else {
             setError('');
             onContinue(username);
